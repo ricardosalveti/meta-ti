@@ -14,6 +14,8 @@ SRC_URI = " \
     file://0001-Revert-egl-wayland-deprecate-drm_handle_format-and-d.patch \
 "
 
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+
 S = "${WORKDIR}/git"
 
 SRCREV = "44b82a7b6fa8a86243911b1b0d6a07b0fd8ecfba"
