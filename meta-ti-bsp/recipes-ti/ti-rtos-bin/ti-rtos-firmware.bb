@@ -31,6 +31,8 @@ CLEANBROKEN = "1"
 PR = "${INC_PR}.0"
 
 # Secure Build
+# set a default value for TI_K3_SECDEV_INSTALL_DIR
+export TI_K3_SECDEV_INSTALL_DIR = "${STAGING_DIR_NATIVE}${datadir}/ti/ti-k3-secdev"
 include recipes-ti/includes/ti-paths.inc
 DEPENDS += "openssl-native"
 DEPENDS:append = "${@ '' if d.getVar('TI_SECURE_DEV_PKG_K3') else ' ti-k3-secdev-native' }"
