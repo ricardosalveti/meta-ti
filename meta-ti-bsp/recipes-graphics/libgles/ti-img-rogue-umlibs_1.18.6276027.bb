@@ -29,6 +29,7 @@ do_install:append() {
     rm -rf "${D}/usr/lib/libvulkan.so"
     rm -rf "${D}/usr/lib/libvulkan.so.0"
     rm -rf "${D}/usr/lib/libvulkan.so.1"
+    mv ${D}/lib/firmware ${D}${nonarch_base_libdir} && rmdir ${D}/lib
 }
 
 PACKAGES = "${PN}-tools ${PN}"
